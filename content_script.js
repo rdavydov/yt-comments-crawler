@@ -1,5 +1,5 @@
 // Write a message to the console
-console.log('%c🧑‍💻 YT Comments Cralwer: Extension loaded.', 'background-color: lightgreen;');
+console.log('%c🧑‍💻 YT Comments Crawler: Extension loaded.', 'background-color: lightgreen;');
 
 // Create a button element
 const button = document.createElement('button');
@@ -30,15 +30,15 @@ document.body.appendChild(button);
 // Attach a click listener to a button
 document.querySelector('#btn-crawl-comments').addEventListener('click', async () => {
     // Write a warning message to the console
-    console.log('%c🧑‍💻 YT Comments Cralwer: Button clicked.', 'background-color: lightgreen;');
+    console.log('%c🧑‍💻 YT Comments Crawler: Button clicked.', 'background-color: lightgreen;');
 
     // Get the video ID from the current URL
     const videoId = window.location.search.split('v=')[1];
-    console.log(`%c🧑‍💻 YT Comments Cralwer: videoId: ${videoId}`, 'background-color: lightgreen;');
+    console.log(`%c🧑‍💻 YT Comments Crawler: videoId: ${videoId}`, 'background-color: lightgreen;');
 
     // Get the video title from the page title and remove the " - YouTube" suffix
     const videoTitle = document.title.replace(' - YouTube', '').trim().replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, ' ');
-    console.log(`%c🧑‍💻 YT Comments Cralwer: videoTitle: ${videoTitle}`, 'background-color: lightgreen;');
+    console.log(`%c🧑‍💻 YT Comments Crawler: videoTitle: ${videoTitle}`, 'background-color: lightgreen;');
 
     button.innerText = '⏳';
     button.title = 'Crawling...';
@@ -62,7 +62,7 @@ document.querySelector('#btn-crawl-comments').addEventListener('click', async ()
 
     // Get the total number of comments
     const totalComments = commentElements.length;
-    // console.log(`%c🧑‍💻 YT Comments Cralwer: totalComments: ${totalComments}`, 'background-color: lightgreen;');
+    // console.log(`%c🧑‍💻 YT Comments Crawler: totalComments: ${totalComments}`, 'background-color: lightgreen;');
 
     // Convert the comment elements to an array of comment objects
     const comments = [];
