@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "YouTube Comments Crawler",
     "description": "Extracts all comments from the YouTube video page, sorts them by the amount of likes and saves them to a csv file.",
-    "version": "0.2",
+    "version": "0.3",
     "icons": {
         "16": "images/ico16.png",
         "19": "images/ico19.png",

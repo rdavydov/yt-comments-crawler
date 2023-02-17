@@ -33,11 +33,11 @@ document.querySelector('#btn-crawl-comments').addEventListener('click', async ()
     console.log('%c🧑‍💻 YT Comments Crawler: Button clicked.', 'background-color: lightgreen;');
 
     // Get the video ID from the current URL
-    const videoId = window.location.search.split('v=')[1];
+    const videoId = window.location.search.split('v=')[1].split(/[&#]/)[0];
     console.log(`%c🧑‍💻 YT Comments Crawler: videoId: ${videoId}`, 'background-color: lightgreen;');
 
     // Get the video title from the page title and remove the " - YouTube" suffix
-    const videoTitle = document.title.replace(' - YouTube', '').trim().replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, ' ');
+    const videoTitle = document.title.replace(' - YouTube', '').trim().replace(/[^ \p{L}0-9-_.]/gu, '').replace(/\s+/g, ' ');
     console.log(`%c🧑‍💻 YT Comments Crawler: videoTitle: ${videoTitle}`, 'background-color: lightgreen;');
 
     button.innerText = '⏳';
