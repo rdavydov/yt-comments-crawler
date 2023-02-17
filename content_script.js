@@ -113,6 +113,6 @@ document.querySelector('#btn-crawl-comments').addEventListener('click', async ()
 
     // Click the link to download the CSV file
     link.click();
-    button.innerText = `↩️`;
+    button.innerText = `🔃`;
     button.title = `Crawl again`;
 });
