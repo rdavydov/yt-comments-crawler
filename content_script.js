@@ -80,8 +80,21 @@ document.querySelector('#btn-crawl-comments').addEventListener('click', async ()
         comments.push(comment);
     }
 
+    // Convert the comment likes to sortable format
+    function getSortableLikes(likes) {
+        let multiplier = 1;
+        if (likes.endsWith("K")) {
+            multiplier = 1000;
+            likes = likes.slice(0, -1);
+        } else if (likes.endsWith("M")) {
+            multiplier = 1000000;
+            likes = likes.slice(0, -1);
+        }
+        return parseFloat(likes) * multiplier;
+    }
+
     // Sort the comments by likes
-    comments.sort((a, b) => b.likes - a.likes);
+    comments.sort((a, b) => getSortableLikes(b.likes) - getSortableLikes(a.likes));
 
     // Convert the comments to a CSV string
     const headers = ['Text', 'Author', 'Likes'];
