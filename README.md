@@ -10,19 +10,16 @@ Browser extension that extracts all comments from the YouTube video page, sorts 
 
 ![Demo](https://github.com/rdavydov/yt-comments-crawler/blob/main/yt-comments-crawler-animation.gif?raw=true)
 
-## How to use
+## How to Use
 
 Open any YouTube video page, scroll down to the comments and then click on the blue icon with white arrows at the left bottom corner. It will crawl through all comments and download a csv file with them.
 
 ## How to Install
 
-Edge
-
-- (public v0.2) WAITING FOR THE APPROVAL
-
-Firefox
-
-- (public v0.2) <https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/>
+| Browser | Link                     |
+|---------|--------------------------|
+| Edge    | WAITING FOR THE APPROVAL |
+| Firefox | <https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/> |
 
 OR (Chromium-based Browsers)
 
