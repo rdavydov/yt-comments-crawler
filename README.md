@@ -22,7 +22,7 @@ Edge
 
 Firefox
 
-- (public v0.1) <https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/>
+- (public v0.2) <https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/>
 
 OR (Chromium-based Browsers)
 
