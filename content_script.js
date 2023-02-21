@@ -1,5 +1,5 @@
 // Write a message to the console
-console.log('%c🧑‍💻 YT Comments Crawler: Extension loaded.', 'background-color: lightgreen;');
+console.log('%c🧑‍💻 YT Comments Crawler: Extension loaded.', 'background-color: lightblue;');
 
 // Create a button element
 const button = document.createElement('button');
@@ -27,18 +27,39 @@ button.style.textDecoration = 'none';
 
 document.body.appendChild(button);
 
+if (document.addEventListener) {
+    document.addEventListener('fullscreenchange', toggleBtn, false);
+    document.addEventListener('mozfullscreenchange', toggleBtn, false);
+    document.addEventListener('MSFullscreenChange', toggleBtn, false);
+    document.addEventListener('webkitfullscreenchange', toggleBtn, false);
+} else {
+    console.log("%c🧑‍💻 YT Comments Crawler: Can't add event listener!', 'background-color: darkred;");
+}
+
+function toggleBtn() {
+    if (document.fullscreenElement || document.mozFullScreenElement ||
+        document.webkitFullscreenElement || document.webkitIsFullScreen ||
+        document.mozFullScreen || document.msFullscreenElement) {
+        console.log('%c🧑‍💻 YT Comments Crawler: Went full screen, hiding the button.', 'background-color: lightblue;');
+        button.hidden = true;
+    } else {
+        console.log('%c🧑‍💻 YT Comments Crawler: Exited full screen, showing the button.', 'background-color: lightblue;');
+        button.hidden = false;
+    }
+}
+
 // Attach a click listener to a button
 document.querySelector('#btn-crawl-comments').addEventListener('click', async () => {
     // Write a warning message to the console
-    console.log('%c🧑‍💻 YT Comments Crawler: Button clicked.', 'background-color: lightgreen;');
+    console.log('%c🧑‍💻 YT Comments Crawler: Button clicked.', 'background-color: lightblue;');
 
     // Get the video ID from the current URL
     const videoId = window.location.search.split('v=')[1].split(/[&#]/)[0];
-    console.log(`%c🧑‍💻 YT Comments Crawler: videoId: ${videoId}`, 'background-color: lightgreen;');
+    console.log(`%c🧑‍💻 YT Comments Crawler: videoId: ${videoId}`, 'background-color: lightblue;');
 
     // Get the video title from the page title and remove the " - YouTube" suffix
     const videoTitle = document.title.replace(' - YouTube', '').trim().replace(/[^ \p{L}0-9-_.]/gu, '').replace(/\s+/g, ' ');
-    console.log(`%c🧑‍💻 YT Comments Crawler: videoTitle: ${videoTitle}`, 'background-color: lightgreen;');
+    console.log(`%c🧑‍💻 YT Comments Crawler: videoTitle: ${videoTitle}`, 'background-color: lightblue;');
 
     button.innerText = '⏳';
     button.title = 'Crawling...';
@@ -62,7 +83,7 @@ document.querySelector('#btn-crawl-comments').addEventListener('click', async ()
 
     // Get the total number of comments
     const totalComments = commentElements.length;
-    // console.log(`%c🧑‍💻 YT Comments Crawler: totalComments: ${totalComments}`, 'background-color: lightgreen;');
+    // console.log(`%c🧑‍💻 YT Comments Crawler: totalComments: ${totalComments}`, 'background-color: lightblue;');
 
     // Convert the comment elements to an array of comment objects
     const comments = [];
