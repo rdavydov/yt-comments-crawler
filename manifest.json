@@ -16,7 +16,7 @@
                 "*://www.youtube.com/*"
             ],
             "js": [
-                "content_script.js"
+                "yt-comments-crawler.js"
             ]
         }
     ]
