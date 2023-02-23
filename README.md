@@ -16,10 +16,10 @@ Open any YouTube video page, scroll down to the comments and then click on the b
 
 ## How to Install
 
-| Browser | Link                     |
+| Browser |                          |
 |---------|--------------------------|
-| Edge    | WAITING FOR THE APPROVAL |
-| Firefox | <https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/> |
+| Edge    | [Link](https://microsoftedge.microsoft.com/addons/detail/youtube-comments-crawler/bghlionfnlnijejpfnbjknloaipfnkod) |
+| Firefox | [Link](https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/) |
 
 OR (Chromium-based Browsers)
 
