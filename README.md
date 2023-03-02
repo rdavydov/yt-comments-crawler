@@ -21,9 +21,9 @@ Open any YouTube video page, scroll down to the comments and then click on the b
 | Edge    | [Link](https://microsoftedge.microsoft.com/addons/detail/youtube-comments-crawler/bghlionfnlnijejpfnbjknloaipfnkod) |
 | Firefox | [Link](https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-crawler/) |
 
-OR (Chromium-based Browsers)
+OR (Chromium-based browsers)
 
-1. Clone This Repo
-2. Go to Your Browser's extensions [chrome://extensions](chrome://extensions)
-3. Enable Developer Mode
-4. Click "Load unpacked" (extension) and Select This Cloned Repo's folder
+1. Clone this repo
+2. Go to your browser's extensions `chrome://extensions`
+3. Enable Developer mode
+4. Click "Load unpacked" (extension) and select this cloned repo's folder
